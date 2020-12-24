@@ -11,21 +11,21 @@ Templates are the core of [nuclei scanner](https://github.com/projectdiscovery/n
 
 An overview of the nuclei template directory including number of templates and HTTP request associated with each directory. 
 
-### Nuclei templates `v7.3.3` overview
+### Nuclei templates `v7.3.4` overview
 
 | Templates | Counts | Templates | Counts |
 |----|----|----|----|
-| cves | 142 | files | 43 |
-| vulnerabilities | 42 | panels | 47 |
+| cves | 143 | files | 45 |
+| vulnerabilities | 42 | panels | 49 |
 | technologies | 40 | security-misconfiguration | 24 |
-| workflows | 16 | tokens | 8 |
+| workflows | 17 | tokens | 8 |
 | dns | 6 | fuzzing | 6 |
-| generic-detections | 3 | default-credentials | 3 |
+| generic-detections | 3 | default-credentials | 4 |
 | subdomain-takeover | 2 | payloads | 2 |
 | wordlists | 1 | misc | 13 |
 
 
-### Nuclei templates `v7.3.3` tree overview
+### Nuclei templates `v7.3.4` tree overview
 
 <details>
 <summary> Nuclei templates </summary>
@@ -35,6 +35,7 @@ An overview of the nuclei template directory including number of templates and H
 ├── README.md
 ├── cves
 │   ├── CVE-2005-2428.yaml
+│   ├── CVE-2008-2398.yaml
 │   ├── CVE-2013-2251.yaml
 │   ├── CVE-2014-6271.yaml
 │   ├── CVE-2017-10075.yaml
@@ -179,6 +180,7 @@ An overview of the nuclei template directory including number of templates and H
 ├── default-credentials
 │   ├── grafana-default-credential.yaml
 │   ├── rabbitmq-default-admin.yaml
+│   ├── solarwinds-default-admin.yaml
 │   └── tomcat-manager-default.yaml
 ├── dns
 │   ├── azure-takeover-detection.yaml
@@ -203,6 +205,7 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── filezilla.yaml
 │   ├── firebase-detect.yaml
 │   ├── git-config.yaml
+│   ├── graylog-api-browser.yaml
 │   ├── htpasswd-detection.yaml
 │   ├── jkstatus-manager.yaml
 │   ├── jolokia.yaml
@@ -230,6 +233,7 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── wordpress-tmm-db-migrate.yaml
 │   ├── wordpress-user-enumeration.yaml
 │   ├── wsdl-detect.yaml
+│   ├── xprober-service.yaml
 │   └── zip-backup-files.yaml
 ├── fuzzing
 │   ├── arbitrary-file-read.yaml
@@ -287,9 +291,11 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── polycom-admin-detect.yaml
 │   ├── pulse-secure-panel.yaml
 │   ├── rabbitmq-dashboard.yaml
+│   ├── rsa-self-service.yaml
 │   ├── sap-hana-xsengine-panel.yaml
 │   ├── sap-netweaver-detect.yaml
 │   ├── sap-recon-detect.yaml
+│   ├── solarwinds-orion.yaml
 │   ├── sonarqube-login.yaml
 │   ├── sonicwall-management-panel.yaml
 │   ├── sonicwall-sslvpn-panel.yaml
@@ -405,6 +411,7 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── open-redirect.yaml
 │   ├── oracle-ebs-bispgraph-file-access.yaml
 │   ├── pdf-signer-ssti-to-rce.yaml
+│   ├── rails6-xss.yaml
 │   ├── rce-shellshock-user-agent.yaml
 │   ├── rce-via-java-deserialization.yaml
 │   ├── rconfig-rce.yaml
@@ -422,7 +429,6 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── vpms-auth-bypass.yaml
 │   ├── w3c-total-cache-ssrf.yaml
 │   ├── wems-manager-xss.yaml
-│   ├── wordpress-duplicator-path-traversal.yaml
 │   ├── wordpress-emails-verification-for-woocommerce.yaml
 │   ├── wordpress-social-metrics-tracker.yaml
 │   ├── wordpress-wordfence-xss.yaml
@@ -444,6 +450,7 @@ An overview of the nuclei template directory including number of templates and H
     ├── netsweeper-workflow.yaml
     ├── rabbitmq-workflow.yaml
     ├── sap-netweaver-workflow.yaml
+    ├── solarwinds-orion-workflow.yaml
     ├── springboot-workflow.yaml
     ├── vbulletin-workflow.yaml
     └── wordpress-workflow.yaml
@@ -451,7 +458,7 @@ An overview of the nuclei template directory including number of templates and H
 
 </details>
 
-**16 directories, 400 files**.
+**16 directories, 407 files**.
 
 Please navigate to https://nuclei.projectdiscovery.io for detailed documentation to build new and your own custom templates and many example templates for easy understanding. 
 
