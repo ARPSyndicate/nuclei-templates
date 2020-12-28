@@ -15,9 +15,9 @@ An overview of the nuclei template directory including number of templates and H
 
 | Templates | Counts | Templates | Counts |
 |----|----|----|----|
-| cves | 143 | files | 45 |
+| cves | 144 | files | 46 |
 | vulnerabilities | 42 | panels | 49 |
-| technologies | 40 | security-misconfiguration | 24 |
+| technologies | 41 | security-misconfiguration | 26 |
 | workflows | 17 | tokens | 8 |
 | dns | 6 | fuzzing | 6 |
 | generic-detections | 3 | default-credentials | 4 |
@@ -76,6 +76,7 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── CVE-2019-11510.yaml
 │   ├── CVE-2019-11580.yaml
 │   ├── CVE-2019-11581.yaml
+│   ├── CVE-2019-11869.yaml
 │   ├── CVE-2019-12314.yaml
 │   ├── CVE-2019-12461.yaml
 │   ├── CVE-2019-12593.yaml
@@ -212,6 +213,7 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── laravel-env.yaml
 │   ├── lazy-file.yaml
 │   ├── magento-config.yaml
+│   ├── owncloud-config.yaml
 │   ├── php-errors.yaml
 │   ├── phpinfo.yaml
 │   ├── public-tomcat-instance.yaml
@@ -314,12 +316,14 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── CVE-2020-5776.csv
 │   └── CVE-2020-6287.xml
 ├── security-misconfiguration
+│   ├── aem-groovyconsole.yaml
 │   ├── apache-tomcat-snoop.yaml
 │   ├── basic-cors.yaml
 │   ├── django-debug-detect.yaml
 │   ├── drupal-user-enum-ajax.yaml
 │   ├── drupal-user-enum-redirect.yaml
 │   ├── front-page-misconfig.yaml
+│   ├── jenkins-stack-trace.yaml
 │   ├── jira-service-desk-signup.yaml
 │   ├── jira-unauthenticated-dashboards.yaml
 │   ├── jira-unauthenticated-popular-filters.yaml
@@ -379,6 +383,7 @@ An overview of the nuclei template directory including number of templates and H
 │   ├── tech-detect.yaml
 │   ├── terraform-detect.yaml
 │   ├── tomcat-detect.yaml
+│   ├── tor-socks-proxy.yaml
 │   ├── waf-detect.yaml
 │   ├── weblogic-detect.yaml
 │   └── werkzeug-debugger-detect.yaml
@@ -458,7 +463,7 @@ An overview of the nuclei template directory including number of templates and H
 
 </details>
 
-**16 directories, 407 files**.
+**16 directories, 412 files**.
 
 Please navigate to https://nuclei.projectdiscovery.io for detailed documentation to build new and your own custom templates and many example templates for easy understanding. 
 
