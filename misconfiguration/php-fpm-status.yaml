@@ -1,21 +1,23 @@
-id: jolokia-instance
+id: php-fpm-status
 
 info:
-  name: Jolokia Version Disclosure
-  author: mavericknerd & dwisiswant0
+  name: PHP-FPM Status
+  author: geeknik
   severity: info
 
 requests:
   - method: GET
     path:
-      - '{{BaseURL}}/jolokia/version'
+      - "{{BaseURL}}/status?full"
+
     matchers-condition: and
     matchers:
       - type: word
         words:
-          - '"timestamp":'
-          - '"protocol":'
-          - '"agent":'
+          - 'pool:'
+          - 'process manager:'
+          - 'start time:'
+          - 'pid:'
         condition: and
       - type: status
         status:

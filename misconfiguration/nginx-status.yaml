@@ -1,21 +1,21 @@
-id: elasticsearch
+id: ngnix-status
 
 info:
-  name: ElasticSearch Information Disclosure
-  author: Shine
+  name: Ngnix Status Page
+  author: dhiyaneshDK
   severity: low
 
 requests:
   - method: GET
     path:
-      - '{{BaseURL}}/_cat/indices?v'
-      - '{{BaseURL}}/_all/_search'
+      - "{{BaseURL}}/nginx_status"
 
     matchers-condition: and
     matchers:
       - type: word
         words:
-          - '"took":'
+          - 'Active connections:'
+
       - type: status
         status:
           - 200
