@@ -28,13 +28,13 @@ An overview of the nuclei template directory including number of templates assoc
 
 | Templates       | Counts                          | Templates        | Counts                         |
 | --------------- | ------------------------------- | ---------------- | ------------------------------ |
-| cves            | 154            | default-logins   | 8 |
+| cves            | 158            | default-logins   | 8 |
 | dns             | 6               | exposed-panels   | 73   |
-| exposed-tokens  | 9  | exposures        | 39      |
+| exposed-tokens  | 9  | exposures        | 40      |
 | fuzzing         | 5           | helpers          | 3        |
-| miscellaneous   | 13     | misconfiguration | 40 |
-| takeovers       | 1         | technologies     | 45     |
-| vulnerabilities | 69 | workflows        | 17        |
+| miscellaneous   | 13     | misconfiguration | 39 |
+| takeovers       | 1         | technologies     | 46     |
+| vulnerabilities | 70 | workflows        | 17        |
 
 
 **Tree structure of nuclei templates:**
@@ -90,7 +90,8 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CVE-2018-5230.yaml
 │   │   ├── CVE-2018-7251.yaml
 │   │   ├── CVE-2018-7490.yaml
-│   │   └── CVE-2018-8006.yaml
+│   │   ├── CVE-2018-8006.yaml
+│   │   └── CVE-2018-8033.yaml
 │   ├── 2019
 │   │   ├── CVE-2019-10092.yaml
 │   │   ├── CVE-2019-1010287.yaml
@@ -146,69 +147,73 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CVE-2019-9733.yaml
 │   │   ├── CVE-2019-9955.yaml
 │   │   └── CVE-2019-9978.yaml
-│   └── 2020
-│       ├── CVE-2020-0618.yaml
-│       ├── CVE-2020-10148.yaml
-│       ├── CVE-2020-10199.yaml
-│       ├── CVE-2020-10204.yaml
-│       ├── CVE-2020-11034.yaml
-│       ├── CVE-2020-1147.yaml
-│       ├── CVE-2020-11738.yaml
-│       ├── CVE-2020-12116.yaml
-│       ├── CVE-2020-12720.yaml
-│       ├── CVE-2020-13167.yaml
-│       ├── CVE-2020-13942.yaml
-│       ├── CVE-2020-14179.yaml
-│       ├── CVE-2020-14181.yaml
-│       ├── CVE-2020-14864.yaml
-│       ├── CVE-2020-14882.yaml
-│       ├── CVE-2020-15129.yaml
-│       ├── CVE-2020-15505.yaml
-│       ├── CVE-2020-15920.yaml
-│       ├── CVE-2020-16846.yaml
-│       ├── CVE-2020-16952.yaml
-│       ├── CVE-2020-17505.yaml
-│       ├── CVE-2020-17506.yaml
-│       ├── CVE-2020-17518.yaml
-│       ├── CVE-2020-17519.yaml
-│       ├── CVE-2020-1943.yaml
-│       ├── CVE-2020-2096.yaml
-│       ├── CVE-2020-2140.yaml
-│       ├── CVE-2020-23972.yaml
-│       ├── CVE-2020-24223.yaml
-│       ├── CVE-2020-24312.yaml
-│       ├── CVE-2020-2551.yaml
-│       ├── CVE-2020-25540.yaml
-│       ├── CVE-2020-26214.yaml
-│       ├── CVE-2020-3187.yaml
-│       ├── CVE-2020-3452.yaml
-│       ├── CVE-2020-4463.yaml
-│       ├── CVE-2020-5284.yaml
-│       ├── CVE-2020-5405.yaml
-│       ├── CVE-2020-5410.yaml
-│       ├── CVE-2020-5412.yaml
-│       ├── CVE-2020-5776.yaml
-│       ├── CVE-2020-5777.yaml
-│       ├── CVE-2020-5902.yaml
-│       ├── CVE-2020-6287.yaml
-│       ├── CVE-2020-7209.yaml
-│       ├── CVE-2020-7318.yaml
-│       ├── CVE-2020-7961.yaml
-│       ├── CVE-2020-8091.yaml
-│       ├── CVE-2020-8115.yaml
-│       ├── CVE-2020-8163.yaml
-│       ├── CVE-2020-8191.yaml
-│       ├── CVE-2020-8193.yaml
-│       ├── CVE-2020-8194.yaml
-│       ├── CVE-2020-8209.yaml
-│       ├── CVE-2020-8512.yaml
-│       ├── CVE-2020-8982.yaml
-│       ├── CVE-2020-9047.yaml
-│       ├── CVE-2020-9344.yaml
-│       ├── CVE-2020-9376.yaml
-│       ├── CVE-2020-9484.yaml
-│       ├── CVE-2020-9496.yaml
-│       └── CVE-2020-9757.yaml
+│   ├── 2020
+│   │   ├── CVE-2020-0618.yaml
+│   │   ├── CVE-2020-10148.yaml
+│   │   ├── CVE-2020-11034.yaml
+│   │   ├── CVE-2020-1147.yaml
+│   │   ├── CVE-2020-11738.yaml
+│   │   ├── CVE-2020-12116.yaml
+│   │   ├── CVE-2020-12720.yaml
+│   │   ├── CVE-2020-13167.yaml
+│   │   ├── CVE-2020-13937.yaml
+│   │   ├── CVE-2020-13942.yaml
+│   │   ├── CVE-2020-14179.yaml
+│   │   ├── CVE-2020-14181.yaml
+│   │   ├── CVE-2020-14864.yaml
+│   │   ├── CVE-2020-14882.yaml
+│   │   ├── CVE-2020-15129.yaml
+│   │   ├── CVE-2020-15505.yaml
+│   │   ├── CVE-2020-15920.yaml
+│   │   ├── CVE-2020-16846.yaml
+│   │   ├── CVE-2020-16952.yaml
+│   │   ├── CVE-2020-17505.yaml
+│   │   ├── CVE-2020-17506.yaml
+│   │   ├── CVE-2020-17518.yaml
+│   │   ├── CVE-2020-17519.yaml
+│   │   ├── CVE-2020-17530.yaml
+│   │   ├── CVE-2020-1943.yaml
+│   │   ├── CVE-2020-2096.yaml
+│   │   ├── CVE-2020-2140.yaml
+│   │   ├── CVE-2020-23972.yaml
+│   │   ├── CVE-2020-24223.yaml
+│   │   ├── CVE-2020-24312.yaml
+│   │   ├── CVE-2020-2551.yaml
+│   │   ├── CVE-2020-25540.yaml
+│   │   ├── CVE-2020-26214.yaml
+│   │   ├── CVE-2020-3187.yaml
+│   │   ├── CVE-2020-3452.yaml
+│   │   ├── CVE-2020-4463.yaml
+│   │   ├── CVE-2020-5284.yaml
+│   │   ├── CVE-2020-5405.yaml
+│   │   ├── CVE-2020-5410.yaml
+│   │   ├── CVE-2020-5412.yaml
+│   │   ├── CVE-2020-5776.yaml
+│   │   ├── CVE-2020-5777.yaml
+│   │   ├── CVE-2020-5902.yaml
+│   │   ├── CVE-2020-6287.yaml
+│   │   ├── CVE-2020-7209.yaml
+│   │   ├── CVE-2020-7318.yaml
+│   │   ├── CVE-2020-7961.yaml
+│   │   ├── CVE-2020-8091.yaml
+│   │   ├── CVE-2020-8115.yaml
+│   │   ├── CVE-2020-8163.yaml
+│   │   ├── CVE-2020-8191.yaml
+│   │   ├── CVE-2020-8193.yaml
+│   │   ├── CVE-2020-8194.yaml
+│   │   ├── CVE-2020-8209.yaml
+│   │   ├── CVE-2020-8512.yaml
+│   │   ├── CVE-2020-8515.yaml
+│   │   ├── CVE-2020-8982.yaml
+│   │   ├── CVE-2020-9047.yaml
+│   │   ├── CVE-2020-9344.yaml
+│   │   ├── CVE-2020-9376.yaml
+│   │   ├── CVE-2020-9484.yaml
+│   │   ├── CVE-2020-9496.yaml
+│   │   └── CVE-2020-9757.yaml
+│   └── 2021
+│       ├── CVE-2021-22873.yaml
+│       └── CVE-2021-3019.yaml
 ├── default-logins
 │   ├── activemq
 │   │   └── activemq-default-login.yaml
@@ -332,6 +337,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   └── zip-backup-files.yaml
 │   ├── configs
 │   │   ├── airflow-configuration-exposure.yaml
+│   │   ├── alibaba-canal-info-leak.yaml
 │   │   ├── amazon-docker-config-disclosure.yaml
 │   │   ├── ansible-config-disclosure.yaml
 │   │   ├── composer-config.yaml
@@ -402,12 +408,12 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── aws-redirect.yaml
 │   ├── cgi-test-page.yaml
 │   ├── django-debug-detect.yaml
-│   ├── docker-api.yaml
 │   ├── docker-registry.yaml
 │   ├── druid-monitor.yaml
 │   ├── drupal-user-enum-ajax.yaml
 │   ├── drupal-user-enum-redirect.yaml
 │   ├── elasticsearch.yaml
+│   ├── exposed-docker-api.yaml
 │   ├── exposed-kibana.yaml
 │   ├── exposed-service-now.yaml
 │   ├── front-page-misconfig.yaml
@@ -427,7 +433,13 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── server-status-localhost.yaml
 │   ├── shell-history.yaml
 │   ├── sidekiq-dashboard.yaml
-│   ├── springboot-detect.yaml
+│   ├── springboot
+│   │   ├── springboot-configprops.yaml
+│   │   ├── springboot-env.yaml
+│   │   ├── springboot-heapdump.yaml
+│   │   ├── springboot-loggers.yaml
+│   │   ├── springboot-mappings.yaml
+│   │   └── springboot-trace.yaml
 │   ├── symfony-debugmode.yaml
 │   ├── tomcat-scripts.yaml
 │   ├── unauthenticated-airflow.yaml
@@ -444,6 +456,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── cacti-detect.yaml
 │   ├── clockwork-php-page.yaml
 │   ├── couchdb-detect.yaml
+│   ├── detect-springboot-actuator.yaml
 │   ├── favicon-detection.yaml
 │   ├── firebase-detect.yaml
 │   ├── google-storage.yaml
@@ -508,6 +521,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── oracle
 │   │   └── oracle-ebs-bispgraph-file-access.yaml
 │   ├── other
+│   │   ├── CNVD-2020-62422.yaml
 │   │   ├── acme-xss.yaml
 │   │   ├── aspnuke-openredirect.yaml
 │   │   ├── bullwark-momentum-series-directory-traversal.yaml
@@ -586,7 +600,7 @@ An overview of the nuclei template directory including number of templates assoc
 
 </details>
 
-**54 directories, 485 files**.
+**56 directories, 497 files**.
 
 📖 Documentation
 -----
