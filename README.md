@@ -28,13 +28,13 @@ An overview of the nuclei template directory including number of templates assoc
 
 | Templates       | Counts                          | Templates        | Counts                         |
 | --------------- | ------------------------------- | ---------------- | ------------------------------ |
-| cves            | 158            | default-logins   | 8 |
+| cves            | 161            | default-logins   | 8 |
 | dns             | 6               | exposed-panels   | 73   |
 | exposed-tokens  | 9  | exposures        | 40      |
 | fuzzing         | 5           | helpers          | 3        |
 | miscellaneous   | 13     | misconfiguration | 39 |
 | takeovers       | 1         | technologies     | 46     |
-| vulnerabilities | 70 | workflows        | 17        |
+| vulnerabilities | 71 | workflows        | 17        |
 
 
 **Tree structure of nuclei templates:**
@@ -178,11 +178,14 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CVE-2020-23972.yaml
 │   │   ├── CVE-2020-24223.yaml
 │   │   ├── CVE-2020-24312.yaml
+│   │   ├── CVE-2020-24579.yaml
 │   │   ├── CVE-2020-2551.yaml
 │   │   ├── CVE-2020-25540.yaml
 │   │   ├── CVE-2020-26214.yaml
+│   │   ├── CVE-2020-27986.yaml
 │   │   ├── CVE-2020-3187.yaml
 │   │   ├── CVE-2020-3452.yaml
+│   │   ├── CVE-2020-35476.yaml
 │   │   ├── CVE-2020-4463.yaml
 │   │   ├── CVE-2020-5284.yaml
 │   │   ├── CVE-2020-5405.yaml
@@ -524,7 +527,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CNVD-2020-62422.yaml
 │   │   ├── acme-xss.yaml
 │   │   ├── aspnuke-openredirect.yaml
-│   │   ├── bullwark-momentum-series-directory-traversal.yaml
+│   │   ├── bullwark-momentum-lfi.yaml
 │   │   ├── cached-aem-pages.yaml
 │   │   ├── couchdb-adminparty.yaml
 │   │   ├── discourse-xss.yaml
@@ -545,6 +548,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── twig-php-ssti.yaml
 │   │   ├── vpms-auth-bypass.yaml
 │   │   ├── wems-manager-xss.yaml
+│   │   ├── wooyun-path-traversal.yaml
 │   │   ├── yarn-resourcemanager-rce.yaml
 │   │   └── zms-auth-bypass.yaml
 │   ├── rails
@@ -600,7 +604,7 @@ An overview of the nuclei template directory including number of templates assoc
 
 </details>
 
-**56 directories, 497 files**.
+**56 directories, 501 files**.
 
 📖 Documentation
 -----
