@@ -28,13 +28,13 @@ An overview of the nuclei template directory including number of templates assoc
 
 | Templates       | Counts                          | Templates        | Counts                         |
 | --------------- | ------------------------------- | ---------------- | ------------------------------ |
-| cves            | 161            | default-logins   | 8 |
-| dns             | 6               | exposed-panels   | 73   |
-| exposed-tokens  | 9  | exposures        | 40      |
-| fuzzing         | 5           | helpers          | 3        |
-| miscellaneous   | 13     | misconfiguration | 39 |
+| cves            | 166            | default-logins   | 8 |
+| dns             | 6               | exposed-panels   | 74   |
+| exposed-tokens  | 9  | exposures        | 42      |
+| fuzzing         | 4           | helpers          | 2        |
+| miscellaneous   | 12     | misconfiguration | 40 |
 | takeovers       | 1         | technologies     | 46     |
-| vulnerabilities | 71 | workflows        | 17        |
+| vulnerabilities | 75 | workflows        | 17        |
 
 
 **Tree structure of nuclei templates:**
@@ -76,6 +76,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CVE-2018-1273.yaml
 │   │   ├── CVE-2018-13379.yaml
 │   │   ├── CVE-2018-13380.yaml
+│   │   ├── CVE-2018-14574.yaml
 │   │   ├── CVE-2018-14728.yaml
 │   │   ├── CVE-2018-16341.yaml
 │   │   ├── CVE-2018-16763.yaml
@@ -85,6 +86,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CVE-2018-19439.yaml
 │   │   ├── CVE-2018-20824.yaml
 │   │   ├── CVE-2018-2791.yaml
+│   │   ├── CVE-2018-3167.yaml
 │   │   ├── CVE-2018-3714.yaml
 │   │   ├── CVE-2018-3760.yaml
 │   │   ├── CVE-2018-5230.yaml
@@ -119,6 +121,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CVE-2019-16759.yaml
 │   │   ├── CVE-2019-16920.yaml
 │   │   ├── CVE-2019-17382.yaml
+│   │   ├── CVE-2019-17506.yaml
 │   │   ├── CVE-2019-17558.yaml
 │   │   ├── CVE-2019-18394.yaml
 │   │   ├── CVE-2019-19368.yaml
@@ -152,6 +155,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── CVE-2020-10148.yaml
 │   │   ├── CVE-2020-11034.yaml
 │   │   ├── CVE-2020-1147.yaml
+│   │   ├── CVE-2020-11710.yaml
 │   │   ├── CVE-2020-11738.yaml
 │   │   ├── CVE-2020-12116.yaml
 │   │   ├── CVE-2020-12720.yaml
@@ -216,6 +220,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   └── CVE-2020-9757.yaml
 │   └── 2021
 │       ├── CVE-2021-22873.yaml
+│       ├── CVE-2021-25646.yaml
 │       └── CVE-2021-3019.yaml
 ├── default-logins
 │   ├── activemq
@@ -277,6 +282,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── kafka-connect-ui.yaml
 │   ├── kafka-monitoring.yaml
 │   ├── kafka-topics-ui.yaml
+│   ├── key-cloak-admin-panel.yaml
 │   ├── kubernetes-dashboard.yaml
 │   ├── manage-engine-admanager-panel.yaml
 │   ├── mobileiron-login.yaml
@@ -347,6 +353,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── exposed-svn.yaml
 │   │   ├── git-config-nginxoffbyslash.yaml
 │   │   ├── git-config.yaml
+│   │   ├── gmail-api-client-secrets.yaml
 │   │   ├── htpasswd-detection.yaml
 │   │   ├── laravel-env.yaml
 │   │   ├── magento-config.yaml
@@ -367,6 +374,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── ds_store.yaml
 │   │   ├── exposed-alps-spring.yaml
 │   │   ├── filezilla.yaml
+│   │   ├── golang-metrics.yaml
 │   │   ├── lazy-file.yaml
 │   │   ├── server-private-keys.yaml
 │   │   └── xprober-service.yaml
@@ -380,16 +388,12 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── arbitrary-file-read.yaml
 │   ├── directory-traversal.yaml
 │   ├── generic-lfi-fuzzing.yaml
-│   ├── iis-shortname.yaml
-│   └── wp-plugin-scan.yaml
+│   └── iis-shortname.yaml
 ├── helpers
-│   ├── payloads
-│   │   ├── CVE-2020-5776.csv
-│   │   └── CVE-2020-6287.xml
-│   └── wordlists
-│       └── wp-plugins.txt
+│   └── payloads
+│       ├── CVE-2020-5776.csv
+│       └── CVE-2020-6287.xml
 ├── miscellaneous
-│   ├── basic-cors-flash.yaml
 │   ├── dir-listing.yaml
 │   ├── htaccess-config.yaml
 │   ├── missing-csp.yaml
@@ -427,6 +431,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   ├── larvel-debug.yaml
 │   ├── linkerd-ssrf-detect.yaml
 │   ├── manage-engine-ad-search.yaml
+│   ├── misconfigured-docker.yaml
 │   ├── nginx-status.yaml
 │   ├── php-errors.yaml
 │   ├── php-fpm-status.yaml
@@ -529,8 +534,11 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── aspnuke-openredirect.yaml
 │   │   ├── bullwark-momentum-lfi.yaml
 │   │   ├── cached-aem-pages.yaml
+│   │   ├── chamilo-lms-xss.yaml
 │   │   ├── couchdb-adminparty.yaml
 │   │   ├── discourse-xss.yaml
+│   │   ├── dlink-850L-info-leak.yaml
+│   │   ├── keycloak-xss.yaml
 │   │   ├── mcafee-epo-rce.yaml
 │   │   ├── microstrategy-ssrf.yaml
 │   │   ├── mida-eframework-xss.yaml
@@ -540,6 +548,7 @@ An overview of the nuclei template directory including number of templates assoc
 │   │   ├── rce-shellshock-user-agent.yaml
 │   │   ├── rce-via-java-deserialization.yaml
 │   │   ├── rconfig-rce.yaml
+│   │   ├── sangfor-edr-rce.yaml
 │   │   ├── sick-beard-xss.yaml
 │   │   ├── sonicwall-sslvpn-shellshock.yaml
 │   │   ├── symantec-messaging-gateway.yaml
@@ -604,7 +613,7 @@ An overview of the nuclei template directory including number of templates assoc
 
 </details>
 
-**56 directories, 501 files**.
+**55 directories, 511 files**.
 
 📖 Documentation
 -----
