@@ -1,21 +1,21 @@
-id: unaunthenticated-jenkin
+id: unauthenticated-prtg
 
 info:
-  name: Unauthenticated Jenkin Dashboard
+  name: Unauthenticated PRTG Traffic Grapher
   author: dhiyaneshDK
   severity: high
-  tags: jenkins
+  reference: https://www.exploit-db.com/ghdb/5808
 
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
+      - "{{BaseURL}}/sensorlist.htm"
 
     matchers-condition: and
     matchers:
       - type: word
         words:
-          - Dashboard [Jenkins]
+          - 'PRTG Traffic Grapher'
         condition: and
 
       - type: status

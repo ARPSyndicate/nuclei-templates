@@ -1,21 +1,21 @@
-id: unaunthenticated-jenkin
-
+id: keycloak-json
 info:
-  name: Unauthenticated Jenkin Dashboard
-  author: dhiyaneshDK
-  severity: high
-  tags: jenkins
+  name: Keycloak Json File
+  author: oppsec
+  severity: info
 
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
+      - "{{BaseURL}}/keycloak.json"
 
     matchers-condition: and
     matchers:
       - type: word
         words:
-          - Dashboard [Jenkins]
+          - realm
+          - resource
+          - auth-server-url
         condition: and
 
       - type: status
