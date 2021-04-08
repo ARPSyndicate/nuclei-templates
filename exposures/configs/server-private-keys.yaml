@@ -4,9 +4,12 @@ info:
   name: Detect Private SSH and TLS Keys
   author: geeknik
   severity: high
+  tags: config,exposure
+
 requests:
   - method: GET
     path:
+      - "{{BaseURL}}/localhost.key"
       - "{{BaseURL}}/host.key"
       - "{{BaseURL}}/www.key"
       - "{{BaseURL}}/private-key"
@@ -35,6 +38,8 @@ requests:
           - "BEGIN DSA PRIVATE KEY"
           - "BEGIN EC PRIVATE KEY"
           - "BEGIN PGP PRIVATE KEY BLOCK"
+          - "ssh-dss"
+          - "ssh-ed25519"
           - "ssh-rsa"
         condition: or
 
