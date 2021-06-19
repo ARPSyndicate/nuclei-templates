@@ -13,6 +13,7 @@ workflows:
         subtemplates:
           - template: cves/2016/CVE-2016-10033.yaml
           - template: cves/2017/CVE-2017-1000170.yaml
+          - template: cves/2017/CVE-2017-5487.yaml
           - template: cves/2018/CVE-2018-3810.yaml
           - template: cves/2018/CVE-2018-7422.yaml
           - template: cves/2019/CVE-2019-6112.yaml
@@ -31,6 +32,7 @@ workflows:
           - template: cves/2020/CVE-2020-35951.yaml
           - template: cves/2020/CVE-2020-35489.yaml
           - template: cves/2021/CVE-2021-24146.yaml
+          - template: cves/2021/CVE-2021-24237.yaml
           - template: cves/2021/CVE-2021-24176.yaml
           - template: cves/2021/CVE-2021-24285.yaml
           - template: cves/2021/CVE-2021-24316.yaml
