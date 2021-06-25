@@ -1,23 +1,23 @@
-id: wpdm-cache-session
+id: wpmudev-pub-keys
 
 info:
-  name: Wpdm-Cache Session
+  name: Wpmudev Dashboard Pub Key
   author: dhiyaneshDk
   severity: medium
-  reference: https://www.exploit-db.com/ghdb/7004
+  reference: https://www.exploit-db.com/ghdb/6443
   tags: wordpress
 
 requests:
   - method: GET
     path:
-      - '{{BaseURL}}/wp-content/uploads/wpdm-cache/'
+      - '{{BaseURL}}/wp-content/plugins/wpmudev-updates/keys/'
     matchers-condition: and
     matchers:
       - type: word
         words:
           - "Index of /"
-          - ".txt"
-          - "wpdm-cache"
+          - ".pub"
+          - "wpmudev"
         condition: and
 
         part: body
